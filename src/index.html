@@ -13,6 +13,40 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <div class="todo-app">
+      <div class="container">
+        <div class="row">
+          <header class="text-center">
+            <h1>To-Do App</h1>
+          </header>
+        </div>
+
+        <div class="row">
+          <div class="input-section d-flex flex-row justify-content-center">
+            <div class="todo-input">
+                <input type="text" class="form-control" placeholder="Write Todo "/>
+            </div>
+          <div class="save-todo btn btn-primary">Save</div>
+          <div class="get-todos btn btn-warning">Get Pending Todos</div>
+        </div>
+      </div>
+
+
+      <!-- List of Todo's -->
+      <div class="todo-data">
+        <div class="row">
+            <div class="list-todo-heading d-flex flex-row justify-content-between">
+                <div class="todo-no">NO.</div>
+                <div class="todo-detail">Todo Item</div>
+                <div class="todo-status">Status</div>
+                <div class="todo-actions">Actions</div>
+            </div>
+          </div>
+          <hr>
+      </div>
+      
+    </div>
+
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
       integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

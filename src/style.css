@@ -1,0 +1,40 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.input-section {
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.todo-input {
+  flex-basis: 45%;
+}
+
+.list-todo-heading > div {
+  font-weight: bold;
+  font-size: 1.5 rem;
+  margin-top: 2rem;
+}
+
+.todo-no {
+  flex-basis: 3%;
+}
+
+.todo-detail {
+  flex-basis: 55%;
+}
+
+.todo-status {
+  flex-basis: 10%;
+}
+
+.todo-actions {
+  flex-basis: 15%;
+}
