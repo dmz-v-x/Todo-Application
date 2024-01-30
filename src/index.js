@@ -1,3 +1,5 @@
+let todos = [];
+
 let todoDataSection = document.getElementById("todo-data");
 let saveButton = document.getElementById("save-todo");
 let todoInputBar = document.getElementById("todo-input-bar");
@@ -14,12 +16,13 @@ todoInputBar.addEventListener("keyup", function toggleSaveButton() {
 
 saveButton.addEventListener("click", function getTextAndAddTodo() {
   let todoText = todoInputBar.value;
-  if (todoText === 0) return;
-  addTodo(todoText);
+  if (todoText.length === 0) return;
+  todos.push(todoText);
+  addTodo(todoText, todos.length);
   todoInputBar.value = "";
 });
 
-function addTodo(todoData) {
+function addTodo(todoData, todoCount) {
   let rowDiv = document.createElement("div");
   let todoItem = document.createElement("div");
   let todoNumber = document.createElement("div");
@@ -51,7 +54,7 @@ function addTodo(todoData) {
   deleteButton.classList.add("btn", "btn-danger");
   finishedButton.classList.add("btn", "btn-success");
 
-  todoNumber.textContent = "1";
+  todoNumber.textContent = `${todoCount}`;
   todoDetail.textContent = todoData;
   todoStatus.textContent = "In Progress";
   deleteButton.textContent = "Delete";
