@@ -11,6 +11,27 @@ function addTodo(todoData) {
   let finishedButton = document.createElement("button");
   let hr = document.createElement("hr");
 
+  rowDiv.classList.add("row");
+  todoItem.classList.add(
+    "todo-item",
+    "d-flex",
+    "flex-row",
+    "justify-content-between",
+    "align-items-center"
+  );
+
+  todoNumber.classList.add("todo-no");
+  todoDetail.classList.add("todo-detail", "text-muted");
+  todoStatus.classList.add("todo-status", "text-muted");
+  todoActions.classList.add(
+    "todo-actions",
+    "d-flex",
+    "justify-content-start",
+    "gap-2"
+  );
+  deleteButton.classList.add("btn", "btn-danger");
+  finishedButton.classList.add("btn", "btn-success");
+
   todoNumber.textContent = "1";
   todoDetail.textContent = todoData;
   todoStatus.textContent = "In Progress";
